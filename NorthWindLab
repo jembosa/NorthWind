@@ -1,0 +1,33 @@
+1)select * from customers;
+2)select Country from customers;
+3)SELECT * FROM Customers
+WHERE CustomerID LIKE 'BL%';
+4)select top 100 * from orders
+5)SELECT * FROM Customers
+WHERE PostalCode IN ('1010', '3012', '12209', '05023');
+6)SELECT * FROM Orders
+WHERE ShipRegion IS NOT NULL;
+7)SELECT * FROM Customers
+ORDER BY Country, City;
+8)Insert into Customers (CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region, PostalCode, Country, Phone, Fax)
+Values ('WENDY', 'Wendys', 'Alex Young', 'Burger Flipper', '123 place', 'city', 'MI', '48091', 'USA', '2488500057', '2488500058') 
+select * from customers
+9)UPDATE Orders
+SET ShipRegion = 'EuroZone'
+WHERE ShipCountry = 'France';
+10)DELETE FROM OrderDetails
+WHERE Quantity = 1;
+11)SELECT CustomerID
+FROM Orders
+WHERE OrderID = 10290;
+12)SELECT *
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;
+13)SELECT FirstName
+FROM Employees
+WHERE ReportsTo IS NULL;
+14)SELECT E.FirstName
+FROM Employees AS E
+JOIN Employees AS M ON E.ReportsTo = M.EmployeeID
+WHERE M.FirstName = 'Andrew';
+15)CREATE INDEX idx_CustomerID ON Customers(CustomerID);
